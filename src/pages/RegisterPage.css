@@ -1,0 +1,225 @@
+.register-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.register-container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+}
+
+.register-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.register-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.register-title {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.register-subtitle {
+    color: #6b7280;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.register-form {
+    margin-top: 1.5rem;
+}
+
+.register-form .pf-v6-c-form__group {
+    margin-bottom: 1.25rem;
+}
+
+.register-form .pf-v6-c-form__label {
+    font-weight: 600;
+    color: #374151;
+}
+
+.register-form input {
+    border-radius: 10px;
+    border: 2px solid #e5e7eb;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.register-form input:focus {
+    border-color: #f093fb;
+    box-shadow: 0 0 0 3px rgba(240, 147, 251, 0.1);
+}
+
+.register-button {
+    margin-top: 1.5rem;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    border: none;
+    border-radius: 10px;
+    padding: 0.875rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(240, 147, 251, 0.4);
+}
+
+.register-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(240, 147, 251, 0.5);
+}
+
+.register-button:active {
+    transform: translateY(0);
+}
+
+.register-alert {
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-10px);
+    }
+
+    75% {
+        transform: translateX(10px);
+    }
+}
+
+.register-footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.register-footer p {
+    color: #6b7280;
+    margin: 0;
+}
+
+.login-link {
+    color: #f093fb;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.login-link:hover {
+    color: #f5576c;
+    text-decoration: underline;
+}
+
+/* Decorative elements */
+.register-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.decoration-square {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    animation: rotate 8s ease-in-out infinite;
+}
+
+.square-1 {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.square-2 {
+    width: 150px;
+    height: 150px;
+    bottom: 15%;
+    right: 10%;
+    animation-delay: 2s;
+}
+
+.square-3 {
+    width: 100px;
+    height: 100px;
+    top: 60%;
+    right: 5%;
+    animation-delay: 4s;
+}
+
+@keyframes rotate {
+
+    0%,
+    100% {
+        transform: rotate(0deg) scale(1);
+        border-radius: 20%;
+    }
+
+    50% {
+        transform: rotate(180deg) scale(1.1);
+        border-radius: 50%;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .register-container {
+        padding: 1rem;
+    }
+
+    .register-card {
+        border-radius: 15px;
+    }
+
+    .register-title {
+        font-size: 1.75rem;
+    }
+
+    .register-form .pf-v6-c-form__group {
+        margin-bottom: 1rem;
+    }
+}
